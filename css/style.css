@@ -13,9 +13,9 @@ html, body {
 }
 
 .node {
-  stroke: black;
+  stroke: gray;
   stroke-width: 1.5px;
-  fill: steelblue;
+  fill: gray;
 }
 
 .link {
