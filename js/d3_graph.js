@@ -89,6 +89,9 @@ var link = svg.select("g.links").selectAll("g.link")
   })
   .attr("class", "link");
 
+link.append("title")
+  .text(function(d){ return "ETX: " + d.etx; });
+
 //add nodes
 var node = svg.select("g.nodes").selectAll("g.node")
     .data(ips)
@@ -99,7 +102,7 @@ var node = svg.select("g.nodes").selectAll("g.node")
 
 //add tooltip
 node.append("title")
-      .text(function(d) { return d.ip; });
+  .text(function(d) { return d.ip; });
 
 //reposition
 force.on("tick", function() {
